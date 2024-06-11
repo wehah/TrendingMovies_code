@@ -6,4 +6,3 @@ Hi, welcome and thanks for checking out my github page.
 
 3 - I have disabled the database WRITE, and removed my API keys. you can use your own firebase database at (index.js) and your your own TMBD API keys at (components/FetchData.js). 
 #Mohamed Ali
-N.B. I have disabled the WRITE on Firebase database & removed my API key from the code, but you can use your own Firebase database and TMBD API key at index.js and FetchData.js respectively then then check WriteData.js to write data.
