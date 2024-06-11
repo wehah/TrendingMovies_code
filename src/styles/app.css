@@ -37,7 +37,7 @@ a {
   /* background-color: #21201e; */
   /* background: yellow; */
   width: 100%;
-  height: 87%;
+  height: 89%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 30%;
@@ -67,7 +67,7 @@ a {
 
 .cardsContainer {
   width: 100%;
-  height: 27%;
+  height: 22%;
   position: absolute;
   bottom:0;
   /* background:red; */
