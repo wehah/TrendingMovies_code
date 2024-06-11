@@ -1,0 +1,20 @@
+.Trailer {
+  position: absolute;
+  /* background-color: green; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.Trailer .video {
+  width: 100%;
+  height: 100%;
+}
+
+.Trailer iframe {
+  width: 100%;
+  height: 100%;
+}

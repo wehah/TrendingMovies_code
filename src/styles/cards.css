@@ -1,0 +1,48 @@
+
+.Cards {
+  
+
+   /* margin-bottom: 0; */
+   margin-left: -0.25rem;
+   transform: scale(1.16);
+
+   padding: 0rem;
+   padding-top:1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   cursor: pointer;
+   border-radius: 0 !important;
+   position: relative;
+   display: inline-block;
+   overflow: hidden;
+   clip-path: polygon( 20.849% 0%,0% 100%,79.151% 100%,100% 0%,20.849% 0% );
+}
+
+.Cards:first-of-type{
+   margin-left: 0;
+   clip-path: polygon( 0% 0%,0% 100%,76.659% 100%,100% 0%,0% 0% );
+   margin-left: 1.8rem
+}
+
+.Cards:last-of-type{
+   clip-path: polygon( 100% 0%,23.402% 0%,0% 100%,100% 100%,100% 0% );
+   margin-right: 0rem !important;
+   /* margin-right: 1.85rem; */
+}
+
+.Cards img {
+   width:100%;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+   display: block;
+  
+}
+
+.Cards img:hover{
+   
+   transform: scale(1.2, 1.2);
+   transform-origin: bottom;
+   transition: transform 0.3s ease;
+   
+}

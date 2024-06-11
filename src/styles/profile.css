@@ -1,0 +1,16 @@
+
+.profile {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-top: 100px;
+   background-color: var(--background-secondary);
+}
+
+.profile h2{
+   padding:30px;
+}
+
+.profile p{
+   padding:30px;
+}
