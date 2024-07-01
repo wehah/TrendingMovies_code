@@ -68,7 +68,7 @@ function Home(props) {
   //control how many movies are displayed for diffrent screen widths
   let commentsStyle;
   const windowCheck = () => {
-    if (window.innerWidth <= 990 || isMobile()) {
+    if (window.innerWidth <= 990) {
       commentsStyle = { backgroundImage: `url(${poster})` };
     } else {
       commentsStyle = { backgroundImage: `url(${backdrop})` };
