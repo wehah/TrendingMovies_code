@@ -61,7 +61,7 @@ position: relative;
 
 @media (min-width: 1200px) {
   .infoCont {
-    max-width: 50% !important;
+    max-width: 85% !important;
    
   }
 }
