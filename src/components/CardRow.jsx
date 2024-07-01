@@ -63,7 +63,7 @@ function CardRow({
       >
         {theType === "movies" && (
           <div className="w-100">
-            <h2 className="mb-2 mb-lg-5">{cardRowTitle} </h2>
+            <h2 className="mb-2 mb-lg-3">{cardRowTitle} </h2>
             <div className="cardsContainers">
               <div className="CardRow row w-100 p-0">
                 {movies &&
@@ -86,7 +86,7 @@ function CardRow({
 
         {theType === "Tvshows" && (
           <div>
-            <h2 className="mb-2 mb-lg-5">{cardRowTitle} </h2>
+            <h2 className="mb-2 mb-lg-3">{cardRowTitle} </h2>
             <div className="cardsContainers">
               <div className="CardRow row w-100 p-0">
                 {TvShows &&
