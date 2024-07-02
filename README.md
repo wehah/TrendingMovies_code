@@ -4,5 +4,6 @@ Hi, welcome and thanks for checking out my github page.
 
 2 - This React project fetches data from an API, writes the data on a firebase database and then displays that data.
 
-3 - I have disabled the database WRITE, and removed my API keys. you can use your own firebase database at (index.js) and your your own TMBD API keys at (components/FetchData.js). 
+3 - I have disabled the database WRITE, and removed my API keys. you can use your own firebase database at (index.js) and your your own TMBD API keys at (components/FetchData.js).
+4 -  Here is the link for the project demo: https://wehah.github.io/TrendingMovies/
 #Mohamed Ali
