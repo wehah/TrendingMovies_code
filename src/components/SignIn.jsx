@@ -65,7 +65,7 @@ const SignIn = () => {
             thisUserDb.firstName,
           );
           setErrors(false);
-          setMessage("successful login")
+          setMessage("successful login, please close the window")
         } else {
           const newErrors = { password: "Invalid password  or email" };
           setErrors(newErrors);
