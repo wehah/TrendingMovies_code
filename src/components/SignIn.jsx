@@ -8,13 +8,13 @@ import firebase from "firebase/compat/app";
 import { db } from "../index";
 import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
 
-
 const SignIn = () => {
   var user = {
     email: "",
     password: "",
   };
   const [theUser, setTheUser] = useState(user);
+  const [message, setMessage] = useState("");
 
   //errors for useRef
   const [errors, setErrors] = useState(false);
@@ -51,18 +51,21 @@ const SignIn = () => {
       if (!querySnapshot.empty) {
         const userDoc = querySnapshot.docs[0];
         const thisUserDb = userDoc.data();
+        formValid ? setTheUser(thisUserDb) : theUser;
+
         const isPasswordValid = bcrypt.compareSync(
           userInput.password,
-          thisUserDb.password
+          thisUserDb.password,
         );
 
         if (isPasswordValid) {
           formValid = true;
           console.log(
             "The Login is successful, the current user is: ",
-            thisUserDb.firstName
+            thisUserDb.firstName,
           );
-          
+          setErrors(false);
+          setMessage("successfull login")
         } else {
           const newErrors = { password: "Invalid password  or email" };
           setErrors(newErrors);
@@ -71,18 +74,8 @@ const SignIn = () => {
         const newErrors = { email: "Invalid email or user does not exist" };
         setErrors(newErrors);
       }
-
-
-      if (formValid) {
-        setTheUser(thisUserDb);
-        console.log(`the current user us:`, thisUserDb);
-        userEmail.current.value = "";
-        Password.current.value = "";
-      } else {
-        console.log(`Login not successfull`, errors);
-      }
     } catch (error) {
-      console.log("login not successful55", errors);
+      console.log("login not successful", errors);
     }
   };
 
@@ -102,27 +95,28 @@ const SignIn = () => {
           placeholder={errors.password ? errors.password : "Password"}
           error={errors.password || undefined}
         />
-        {errors.password  && (
+        {errors.password && (
           <p className="m-0" style={{ color: "red" }}>
-            {errors.password }
+            {errors.password}
           </p>
         )}
-          {!errors.password && errors.email && (
+        {!errors.password && errors.email ? (
           <p className="m-0" style={{ color: "red" }}>
-            {errors.email }
+            {errors.email}
           </p>
-        )}
+        ) : !errors.password && !errors.email && message ? (
+          <p className="m-0" style={{ color: "green" }}>
+            {message}
+          </p>
+        ) : null}
 
         <Button
-          className={
-            formValid ? "mt-2 summit formValid" : "p-2 mt-2 summit"
-          }
+          className={formValid ? "mt-2 summit formValid" : "p-2 mt-2 summit"}
           variant="primary"
           type="submit"
         >
           Submit
         </Button>
-        <p className="m-0 mt-3">database write is disabled. login email:foo@foo.com pass: fooooo99</p>
       </form>
     </>
   );
