@@ -8,7 +8,14 @@ import bcrypt from "bcryptjs";
 import React from "react";
 import firebase from "firebase/compat/app";
 import { db } from "../index";
-import { collection, query, where, getDocs, addDoc } from "firebase/firestore";
+import {
+  collection,
+  query,
+  where,
+  getDocs,
+  addDoc,
+  doc,
+} from "firebase/firestore";
 
 const SignUp = () => {
   var user = {
@@ -18,6 +25,7 @@ const SignUp = () => {
     password: "",
   };
   const [theUser, setTheUser] = useState(user);
+  const [message, setMessage] = useState("");
   const [errors, setErrors] = useState(false);
 
   const userEmail = useRef();
@@ -56,6 +64,7 @@ const SignUp = () => {
       const usersRef = collection(db, "users");
       const usersq = query(usersRef, where("email", "==", userInput.email));
       const querySnapshot = await getDocs(usersq);
+      const newUserRef = doc(usersRef);
 
       Object.keys(userInput).forEach((key) => {
         if (userInput[key].trim() === "") {
@@ -77,18 +86,30 @@ const SignUp = () => {
       setErrors(newErrors);
 
       if (formValid) {
-        setTheUser(userInput);
-        await addDoc(usersRef, {
-          ...userInput,
-          password: bcrypt.hashSync(Password.current.value, 10),
+        setTheUser({
+          ...theUser,
+          firstName: FirstName.current.value,
+          lastName: LastName.current.value,
+          email: userEmail.current.value,
+          password: Password.current.value,
         });
-        console.log(`The user hasbeen added to the database`, theUser);
+        await addDoc(usersRef, {
+          ...theUser,
+          firstName: FirstName.current.value,
+          lastName: LastName.current.value,
+          email: userEmail.current.value,
+          password: bcrypt.hashSync(Password.current.value, 10),
+          id: newUserRef.id,
+        });
+        setMessage("Successfull Sign Up, Please close the Window");
+        setErrors(false);
+        console.log(message);
         FirstName.current.value = "";
         LastName.current.value = "";
         userEmail.current.value = "";
         Password.current.value = "";
       } else {
-        console.log(`user inputs asign UP SIGN UP d`, errors);
+        console.log(`There was an error while trying to sign up:`, errors);
       }
     } catch (error) {
       console.error("Error signing up:", error);
@@ -96,7 +117,7 @@ const SignUp = () => {
   };
 
   useEffect(() => {
-    console.log(`ser inputs asign UP SIGN UP d `, theUser);
+    console.log(`The user hasbeen added to the database`, theUser);
   }, [theUser.email]);
 
   return (
@@ -131,6 +152,7 @@ const SignUp = () => {
           error={errors.password || undefined}
         />
         {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
+        {!errors && message ? (<p style={{ color: "green" }}>{message}</p> ) : null}
 
         <Button
           className={formValid ? "mt-2 summit formValid" : "p-2 mt-2 summit"}
@@ -139,9 +161,6 @@ const SignUp = () => {
         >
           Submit
         </Button>
-        <p className="m-0 mt-3">
-          database write is disabled. login email:foo@foo.com pass: fooooo99
-        </p>
       </form>
     </>
   );
