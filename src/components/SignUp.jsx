@@ -101,7 +101,7 @@ const SignUp = () => {
           password: bcrypt.hashSync(Password.current.value, 10),
           id: newUserRef.id,
         });
-        setMessage("Successfull Sign Up, Please close the Window");
+        setMessage("Successful Sign Up, Please close the Window");
         setErrors(false);
         console.log(message);
         FirstName.current.value = "";
