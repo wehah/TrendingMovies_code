@@ -173,3 +173,9 @@ align-items: center;
   align-items: center;
 }
 
+@media (max-width: 990px) and (orientation: landscape),
+       (max-height: 600px) and (max-width: 990px) {
+        .profileIcon{
+            display: none !important;
+        }
+}
