@@ -28,8 +28,9 @@ a {
 }
 
 .main {
-  height: 96vh;
+  height: 93dvh;
   position:relative;
+  padding: 0;
   
 }
 
@@ -67,7 +68,7 @@ a {
 
 .cardsContainer {
   width: 100% !important;
-  height: 39%;
+  height: 35%;
   position: absolute;
   bottom:0;
   /* background:red; */
@@ -83,7 +84,7 @@ a {
 .cardsFixed {
   /* background:blue; */
   padding-bottom:1rem;
-  height:100%;
+  /* height:100%; */
   overflow: auto;
   position:relative;
 }
@@ -98,6 +99,6 @@ a {
 }
 
 .footer{
-  max-height: 3vh;
-  margin: 0.5rem;
+  max-height: 7dvh;
+  margin-top: 0.4rem;
 }
