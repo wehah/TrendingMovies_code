@@ -15,7 +15,7 @@
 }
 
 .cardsContainers{
-    width:100% !important;
+    /* width:100% !important; */
     overflow: auto;
     /* padding: 2rem;  */
     /* gap:1rem; */   
@@ -42,4 +42,12 @@
     .CardRow{
         width:450% !important;
     }
+}
+
+
+@media (max-width: 990px) and (orientation: landscape),
+       (max-height: 600px) and (max-width: 990px) {
+        .CardRow{
+            width:200% !important;
+        }
 }
