@@ -1,0 +1,87 @@
+
+.overlay{
+  position:fixed;
+  z-index:10;
+  width:80%;
+  height:30%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top:10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color:var(--background-primary);
+  border:1px solid var(--border-primary);
+  border-radius:3px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+
+  position:relative;
+}
+
+.modal .closeicon{
+  position:absolute;
+  top: 0px;
+  right:0px;
+  background-color: white;
+
+  fill:#E50915;;
+  width:48px;
+  height:48px;
+  transform:scale(.6);
+  cursor: pointer;
+}
+.modal .closeicon:hover{
+  fill:#9b074c;;
+}
+
+
+.modal input {
+  border:none;
+  border-bottom:1px dotted var(--border-primary);
+  width: 90%;
+  font-size: 16px;
+  margin-bottom:20px;
+
+}
+
+.modal input:focus {
+  outline: none;
+
+}
+
+.modal input::placeholder {
+  opacity:0.5;
+}
+
+.modal button {
+  padding:5px;
+  border:1px solid var(--border-primary);
+  border-radius:3px;
+  background-color: rgb(246, 253, 255);
+  cursor: pointer;
+  color: #38afff;
+  transition: all 0.3s ease-in-out;
+  width:100px;
+}
+
+.modal button:disabled {
+  border:none;
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.modal button:hover {
+  background-color: rgb(215, 246, 255);
+
+}
+

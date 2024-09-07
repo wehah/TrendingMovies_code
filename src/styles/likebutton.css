@@ -1,0 +1,12 @@
+
+.likebutton{
+  width:24px;
+  cursor: pointer;
+  margin:10px 0px 0px 10px;
+}
+
+.likemenu .icon {
+  margin:10px 10px 0px 10px;
+  width: 24px;
+  height: 24px;
+}

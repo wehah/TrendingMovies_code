@@ -1,0 +1,94 @@
+.InfoDisplay {
+  padding: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 1rem;
+  width: 60%;
+  
+    /* background: linear-gradient(0deg, #21201e 0%, rgba(115, 115, 115, 0) 100%);
+
+  background-repeat: no-repeat;
+  background-size: 200% 10%;
+  background-position: 0 100%;
+  background-blend-mode: multiply; */
+
+position: relative;
+}
+
+.buttonPair {
+  display: flex;
+  gap: 2rem;
+}
+
+.titleImageCont {
+  /* background-color: green; */
+  max-width: 50% !important;
+  min-width: 50% !important;
+  max-height: 10vh !important;
+  min-height: 10vh !important;
+  position: relative;
+}
+
+.titleImageCont img {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+
+}
+
+.infoCont {
+    /* background-color: green; */
+    max-width: 100% !important;
+    /* max-height: 20vh !important;
+    min-height: 20vh !important; */
+    display: flex ;
+    align-items: center;
+    position: relative;
+}
+
+.infoCont p{
+    /* position: absolute;
+    left: 0%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) */
+}
+
+@media (min-width: 1200px) {
+  .infoCont {
+    max-width: 85% !important;
+   
+  }
+}
+
+@media (max-width: 990px) {
+  .InfoDisplay {
+    width: 80% !important;
+  }
+}
+
+
+@media (max-width: 990px) and (orientation: landscape),
+       (max-height: 600px) and (max-width: 990px) {
+        .InfoDisplay {
+          justify-content: flex-start !important;
+          align-items: end !important;
+           width: 100% !important;
+        }
+
+      .titleImageCont img {
+          left: auto;
+          right: 0% !important;
+         
+      }
+
+      .genre {
+        display:none !important;
+      }
+
+      }

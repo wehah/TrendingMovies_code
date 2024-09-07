@@ -1,0 +1,23 @@
+
+
+.TopRankCard{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.TopRankCard h3 {
+    width: fit-content;
+    padding:1rem 0.3rem 1rem 0.3rem;
+    
+    text-align: center;
+    background-color: #E50915;
+    border-radius: 0.3rem;
+  
+   
+/* background: linear-gradient(70deg, transparent 0%, transparent 10%, red 80%, red 80%); */
+}
+
+.TopRankCard h2{
+    
+}

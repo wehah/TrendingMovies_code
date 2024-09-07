@@ -1,0 +1,17 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #65737e;
+    /* padding: 1rem; */
+    border-radius: 0.3rem;
+    margin: 2rem;
+  }
+  
+  input {
+    /* max-width: 100%; */
+    /* width: 90%; */
+  
+    /* margin: 0.5rem !important; */
+  }
+  

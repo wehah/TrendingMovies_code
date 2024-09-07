@@ -1,0 +1,125 @@
+.loginCont {
+    /* width: 98vw !important; */
+    margin: 0.5rem;
+    background-color: #21201e;
+    border-radius: 0.3rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .buttonCont {
+    background-color: #fff;
+    padding: 0.5rem;
+    margin: 1.5;
+    border-radius: 0.2rem;
+    /* align-self: center; */
+    /* margin: 0 2rem 0 2rem; */
+  
+
+    /* width: 90% !important; */
+    /* padding: 0.5rem; */
+    /* margin: 0.6rem; */
+  }
+  
+  .signUp {
+    background: none !important;
+    width: 49%  !important;
+    /* padding: 1rem !important; */
+    border-radius: 0.3rem;
+    border: none !important;
+    color: #21201e !important;
+  }
+  
+  .signIn {
+    background: none !important;
+    width: 49%  !important;
+    border: none !important;
+    color: #21201e !important;
+    /* border: 0.1rem solid red; */
+  }
+  
+  .currentState {
+    background-color: rgb(229, 9, 21) !important;
+    color: white !important;
+  }
+  
+  .userForm {
+    background: none !important;
+  }
+  
+  .summit {
+    width: 49% !important;
+    /* padding: 1rem !important; */
+    background-color: #fff !important;
+    color: #21201e !important;
+    border: none !important;
+   
+  }
+  
+  .summit:hover {
+    background-color: rgb(229, 9, 21) !important;
+    color: white !important;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .formValid {
+    background-color: rgb(229, 9, 21) !important;
+    color: white !important;
+    transition: ease-in-out 0.3s;
+  }
+
+  .modalWrap {
+    position:absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    /* width: 60rem; */
+    transform: translate(-50%, -50%) !important;
+    background-color: rgba(33, 32, 30, 0.5) !important;
+
+  }
+
+  .LoginModal {
+    position:absolute;
+    top: 50% !important;
+    left: 50% !important;
+    width: 60rem;
+    transform: translate(-50%, -50%) !important;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 990px) {
+    .LoginModal {
+      width: 90vw !important;
+    }
+   }
+
+  .modal button {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    padding: 1rem !important;
+  }
+  .modal .CloseButton {
+    /* width: 5.0rem;
+    height: 5.0rem; */
+    color: rgb(229, 9, 21) !important;
+    /* padding: 0;
+    margin: 0; */
+    align-self: end !important;
+    cursor: pointer;
+  }
+
+  .modal input {
+    width:100% !important;
+    margin-bottom: 1rem !important;
+  }

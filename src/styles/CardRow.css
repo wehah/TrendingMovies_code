@@ -1,0 +1,52 @@
+
+
+@media (max-width: 990px) {
+
+
+    .displayBar h2 {
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 1; 
+    }
+
+    .cardsContainers{
+        padding: 0 !important;
+     }
+
+    .CardRow{
+        width:450% !important;
+    }
+}
+
+
+@media (max-width: 990px) and (orientation: landscape),
+       (max-height: 600px) and (max-width: 990px) {
+        .CardRow{
+            width:200% !important;
+        }
+}
+
+
+/* new css */
+
+.wrapper {
+    height: 100% !important;
+  }
+
+
+
+  .viewBar {
+    /* overflow: hidden; */
+    overflow-y: scroll;
+    height: 85% !important;
+  }
+
+  .notRow {
+    display: flex;
+    flex-direction: row !important;
+    height: 100% !important;
+    width: fit-content;
+  }
+
+
